@@ -7,7 +7,7 @@
  */
 
 import React, { ReactElement } from 'react';
-import { createStore, Plugin, PluginFunctions, PluginOnDocumentLoad, ViewerState } from '@react-pdf-viewer/core';
+import { createStore, Plugin, PluginFunctions, PluginOnDocumentLoad, ViewerState } from '@react-pdf-renderer/core';
 
 import CurrentPageInput from './CurrentPageInput';
 import CurrentPageLabel, { CurrentPageLabelProps } from './CurrentPageLabel';

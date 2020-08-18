@@ -7,7 +7,7 @@
  */
 
 import { Component, ReactElement } from 'react';
-import { OpenFile, Plugin } from '@react-pdf-viewer/core';
+import { OpenFile, Plugin } from '@react-pdf-renderer/core';
 
 export interface RenderDownloadProps {
     onClick(): void;
@@ -29,4 +29,4 @@ export interface DownloadPluginProps {
 
 export default function downloadPlugin(props?: DownloadPluginProps): DownloadPlugin;
 
-export class DownloadIcon extends Component {}
+export class DownloadIcon extends Component { }

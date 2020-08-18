@@ -7,7 +7,7 @@
  */
 
 import { Component, ReactElement } from 'react';
-import { Plugin } from '@react-pdf-viewer/core';
+import { Plugin } from '@react-pdf-renderer/core';
 
 export interface ShowPropertiesMenuItemProps {
     onClick: () => void;
@@ -30,4 +30,4 @@ export interface PropertiesPlugin extends Plugin {
 
 export default function propertiesPlugin(): PropertiesPlugin;
 
-export class InfoIcon extends Component {}
+export class InfoIcon extends Component { }

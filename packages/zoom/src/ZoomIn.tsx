@@ -7,7 +7,7 @@
  */
 
 import React, { ReactElement } from 'react';
-import { Store } from '@react-pdf-viewer/core';
+import { Store } from '@react-pdf-renderer/core';
 
 import StoreProps from './StoreProps';
 import useZoom from './useZoom';

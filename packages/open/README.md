@@ -3,8 +3,8 @@
 This plugin allows user to open a local file.
 
 ~~~ javascript
-import openPlugin from '@react-pdf-viewer/open';
-import '@react-pdf-viewer/open/styles.css';
+import openPlugin from '@react-pdf-renderer/open';
+import '@react-pdf-renderer/open/styles.css';
 
 const openPluginInstance = openPlugin();
 
@@ -27,7 +27,7 @@ return (
 ## Use a custom input
 
 ~~~ javascript
-import openPlugin from '@react-pdf-viewer/open';
+import openPlugin from '@react-pdf-renderer/open';
 
 const openPluginInstance = openPlugin();
 

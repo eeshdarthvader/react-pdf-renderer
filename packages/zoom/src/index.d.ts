@@ -7,7 +7,7 @@
  */
 
 import { Component, ReactElement, ReactNode } from 'react';
-import { Plugin, SpecialZoomLevel } from '@react-pdf-viewer/core';
+import { Plugin, SpecialZoomLevel } from '@react-pdf-renderer/core';
 
 // ------------------------
 // Render zooming in button
@@ -73,5 +73,5 @@ export interface ZoomPlugin extends Plugin {
 }
 
 export default function zoomPlugin(): ZoomPlugin;
-export class ZoomInIcon extends Component {}
-export class ZoomOutIcon extends Component {}
+export class ZoomInIcon extends Component { }
+export class ZoomOutIcon extends Component { }

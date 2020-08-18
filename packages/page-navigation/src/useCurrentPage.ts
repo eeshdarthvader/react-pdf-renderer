@@ -7,7 +7,7 @@
  */
 
 import { useLayoutEffect, useState } from 'react';
-import { Store, StoreHandler } from '@react-pdf-viewer/core';
+import { Store, StoreHandler } from '@react-pdf-renderer/core';
 
 import StoreProps from './StoreProps';
 

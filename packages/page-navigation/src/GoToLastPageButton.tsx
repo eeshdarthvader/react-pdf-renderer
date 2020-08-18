@@ -7,7 +7,7 @@
  */
 
 import React, { FC, useContext } from 'react';
-import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-viewer/core';
+import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-renderer/core';
 
 import DownArrowIcon from './DownArrowIcon';
 import { RenderGoToLastPageProps } from './GoToLastPage';
@@ -18,8 +18,8 @@ const GoToLastPageButton: FC<RenderGoToLastPageProps> = ({ onClick }) => {
     const l10nContext = useContext(LocalizationContext);
 
     const label = (l10nContext && l10nContext.plugins && l10nContext.plugins.pageNavigation)
-            ? l10nContext.plugins.pageNavigation.goToLastPageButton
-            : 'Last page';
+        ? l10nContext.plugins.pageNavigation.goToLastPageButton
+        : 'Last page';
 
     return (
         <Tooltip

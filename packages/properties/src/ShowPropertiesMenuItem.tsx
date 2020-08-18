@@ -7,7 +7,7 @@
  */
 
 import React, { FC } from 'react';
-import { MenuItem } from '@react-pdf-viewer/core';
+import { MenuItem } from '@react-pdf-renderer/core';
 
 import { RenderShowPropertiesProps } from './ShowProperties';
 

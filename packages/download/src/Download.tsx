@@ -7,7 +7,7 @@
  */
 
 import React, { useEffect, useState } from 'react';
-import { OpenFile, Store, StoreHandler } from '@react-pdf-viewer/core';
+import { OpenFile, Store, StoreHandler } from '@react-pdf-renderer/core';
 
 import DownloadButton from './DownloadButton';
 import downloadFile from './downloadFile';

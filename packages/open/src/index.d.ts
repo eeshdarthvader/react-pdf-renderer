@@ -7,7 +7,7 @@
  */
 
 import { ChangeEvent, Component, ReactElement } from 'react';
-import { Plugin } from '@react-pdf-viewer/core';
+import { Plugin } from '@react-pdf-renderer/core';
 
 export interface RenderOpenProps {
     onClick: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -23,4 +23,4 @@ export interface OpenPlugin extends Plugin {
 }
 
 export default function openPlugin(): OpenPlugin;
-export class OpenFileIcon extends Component {}
+export class OpenFileIcon extends Component { }

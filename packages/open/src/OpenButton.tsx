@@ -7,7 +7,7 @@
  */
 
 import React, { useContext } from 'react';
-import { LocalizationContext, Position, Tooltip } from '@react-pdf-viewer/core';
+import { LocalizationContext, Position, Tooltip } from '@react-pdf-renderer/core';
 
 import { RenderOpenProps } from './Open';
 import OpenFileIcon from './OpenFileIcon';
@@ -18,8 +18,8 @@ const OpenButton: React.FC<RenderOpenProps> = ({ onClick }) => {
     const l10nContext = useContext(LocalizationContext);
 
     const label = (l10nContext && l10nContext.plugins && l10nContext.plugins.open)
-            ? l10nContext.plugins.open.openFile
-            : 'Open file';
+        ? l10nContext.plugins.open.openFile
+        : 'Open file';
 
     return (
         <Tooltip

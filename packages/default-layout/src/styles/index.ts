@@ -6,10 +6,10 @@
  * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
 
-import '@react-pdf-viewer/attachment/styles';
-import '@react-pdf-viewer/bookmark/styles';
-import '@react-pdf-viewer/thumbnail/styles';
-import '@react-pdf-viewer/toolbar/styles';
+import '@react-pdf-renderer/attachment/styles';
+import '@react-pdf-renderer/bookmark/styles';
+import '@react-pdf-renderer/thumbnail/styles';
+import '@react-pdf-renderer/toolbar/styles';
 
 import './defaultLayout.less';
 import './sidebar.less';

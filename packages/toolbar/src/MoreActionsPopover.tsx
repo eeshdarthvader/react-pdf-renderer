@@ -7,9 +7,9 @@
  */
 
 import React, { useContext } from 'react';
-import { Button, LocalizationContext, Menu, MenuDivider, Popover, Position, Toggle, Tooltip } from '@react-pdf-viewer/core';
-import { ScrollMode } from '@react-pdf-viewer/scroll-mode';
-import { SelectionMode } from '@react-pdf-viewer/selection-mode';
+import { Button, LocalizationContext, Menu, MenuDivider, Popover, Position, Toggle, Tooltip } from '@react-pdf-renderer/core';
+import { ScrollMode } from '@react-pdf-renderer/scroll-mode';
+import { SelectionMode } from '@react-pdf-renderer/selection-mode';
 
 import MoreIcon from './MoreIcon';
 import ToolbarSlot from './ToolbarSlot';

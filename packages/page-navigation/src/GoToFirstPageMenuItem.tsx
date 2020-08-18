@@ -7,7 +7,7 @@
  */
 
 import React, { FC, useContext } from 'react';
-import { LocalizationContext, MenuItem } from '@react-pdf-viewer/core';
+import { LocalizationContext, MenuItem } from '@react-pdf-renderer/core';
 
 import UpArrowIcon from './UpArrowIcon';
 
@@ -19,8 +19,8 @@ const GoToFirstPageMenuItem: FC<GoToFirstPageMenuItemProps> = ({ onClick }) => {
     const l10nContext = useContext(LocalizationContext);
 
     const label = (l10nContext && l10nContext.plugins && l10nContext.plugins.pageNavigation)
-            ? l10nContext.plugins.pageNavigation.goToFirstPageMenuItem
-            : 'Go to first page';
+        ? l10nContext.plugins.pageNavigation.goToFirstPageMenuItem
+        : 'Go to first page';
 
     return (
         <MenuItem icon={<UpArrowIcon />} onClick={onClick}>

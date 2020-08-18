@@ -7,7 +7,7 @@
  */
 
 import { Component, ReactElement } from 'react';
-import { Plugin } from '@react-pdf-viewer/core';
+import { Plugin } from '@react-pdf-renderer/core';
 
 // -------------------
 // Render current page
@@ -105,7 +105,7 @@ export default function pageNavigationPlugin(): PageNavigationPlugin;
 // Icons
 // -----
 
-export class DownArrowIcon extends Component {}
-export class NextIcon extends Component {}
-export class PreviousIcon extends Component {}
-export class UpArrowIcon extends Component {}
+export class DownArrowIcon extends Component { }
+export class NextIcon extends Component { }
+export class PreviousIcon extends Component { }
+export class UpArrowIcon extends Component { }

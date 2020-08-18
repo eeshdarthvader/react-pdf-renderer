@@ -7,7 +7,7 @@
  */
 
 import React, { FC, ReactElement } from 'react';
-import { Store } from '@react-pdf-viewer/core';
+import { Store } from '@react-pdf-renderer/core';
 
 import GoToPreviousPageButton from './GoToPreviousPageButton';
 import StoreProps from './StoreProps';

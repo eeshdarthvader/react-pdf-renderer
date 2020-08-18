@@ -7,7 +7,7 @@
  */
 
 import React, { FC } from 'react';
-import { Button, Position, Tooltip } from '@react-pdf-viewer/core';
+import { Button, Position, Tooltip } from '@react-pdf-renderer/core';
 
 import { RenderShowPropertiesProps } from './ShowProperties';
 

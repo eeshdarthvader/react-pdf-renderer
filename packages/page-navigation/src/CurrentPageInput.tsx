@@ -7,7 +7,7 @@
  */
 
 import React, { ChangeEvent, FC, KeyboardEvent, useState } from 'react';
-import { Store } from '@react-pdf-viewer/core';
+import { Store } from '@react-pdf-renderer/core';
 
 import StoreProps from './StoreProps';
 import useCurrentPage from './useCurrentPage';
@@ -53,7 +53,7 @@ const CurrentPageInput: FC<{
             jumpTo(previousPage);
         }
     };
-    
+
     const jumpTo = (page: number): void => {
         const jumpToPage = store.get('jumpToPage');
         if (jumpToPage) {

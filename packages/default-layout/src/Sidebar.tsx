@@ -7,7 +7,7 @@
  */
 
 import React, { ReactElement, useContext, useState } from 'react';
-import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-viewer/core';
+import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-renderer/core';
 
 import BookmarkIcon from './BookmarkIcon';
 import FileIcon from './FileIcon';
@@ -74,7 +74,7 @@ const Sidebar: React.FC<SidebarProps> = ({ tabContents }) => {
                                     <FileIcon />
                                 </Button>
                             )}
-                            content={() => 
+                            content={() =>
                                 l10n && l10n.defaultLayoutPlugin ? l10n.defaultLayoutPlugin.attachment : 'Attachment'
                             }
                             offset={TOOLTIP_OFFSET}
@@ -82,7 +82,7 @@ const Sidebar: React.FC<SidebarProps> = ({ tabContents }) => {
                     </div>
                 </div>
                 <div className={`rpv-default-layout-sidebar-content ${opened ? 'rpv-default-layout-sidebar-content-opened' : ''}`}>
-                    { tabContents && tabContents[tab] ? tabContents[tab]() : <></>}
+                    {tabContents && tabContents[tab] ? tabContents[tab]() : <></>}
                 </div>
             </div>
         </div>

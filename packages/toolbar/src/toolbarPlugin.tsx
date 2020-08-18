@@ -8,19 +8,19 @@
 
 import React from 'react';
 
-import { Plugin, PluginFunctions, PluginOnDocumentLoad, RenderViewer, ViewerState, PluginOnTextLayerRender } from '@react-pdf-viewer/core';
-import downloadPlugin, { DownloadPluginProps } from '@react-pdf-viewer/download';
-import dropPlugin from '@react-pdf-viewer/drop';
-import fullScreenPlugin from '@react-pdf-viewer/full-screen';
-import openPlugin from '@react-pdf-viewer/open';
-import pageNavigationPlugin from '@react-pdf-viewer/page-navigation';
-import printPlugin from '@react-pdf-viewer/print';
-import propertiesPlugin from '@react-pdf-viewer/properties';
-import rotatePlugin from '@react-pdf-viewer/rotate';
-import scrollModePlugin from '@react-pdf-viewer/scroll-mode';
-import searchPlugin, { SearchPluginProps } from '@react-pdf-viewer/search';
-import selectionModePlugin, { SelectionModePluginProps } from '@react-pdf-viewer/selection-mode';
-import zoomPlugin from '@react-pdf-viewer/zoom';
+import { Plugin, PluginFunctions, PluginOnDocumentLoad, RenderViewer, ViewerState, PluginOnTextLayerRender } from '@react-pdf-renderer/core';
+import downloadPlugin, { DownloadPluginProps } from '@react-pdf-renderer/download';
+import dropPlugin from '@react-pdf-renderer/drop';
+import fullScreenPlugin from '@react-pdf-renderer/full-screen';
+import openPlugin from '@react-pdf-renderer/open';
+import pageNavigationPlugin from '@react-pdf-renderer/page-navigation';
+import printPlugin from '@react-pdf-renderer/print';
+import propertiesPlugin from '@react-pdf-renderer/properties';
+import rotatePlugin from '@react-pdf-renderer/rotate';
+import scrollModePlugin from '@react-pdf-renderer/scroll-mode';
+import searchPlugin, { SearchPluginProps } from '@react-pdf-renderer/search';
+import selectionModePlugin, { SelectionModePluginProps } from '@react-pdf-renderer/selection-mode';
+import zoomPlugin from '@react-pdf-renderer/zoom';
 
 import Toolbar, { ToolbarProps } from './Toolbar';
 
@@ -134,7 +134,7 @@ const toolbarPlugin = (props?: ToolbarPluginProps): ToolbarPlugin => {
             let { slot } = props;
             plugins.forEach(plugin => {
                 if (plugin.renderViewer) {
-                    slot = plugin.renderViewer({...props, slot});
+                    slot = plugin.renderViewer({ ...props, slot });
                 }
             });
             return slot;

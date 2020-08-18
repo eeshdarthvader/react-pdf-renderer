@@ -7,7 +7,7 @@
  */
 
 import React, { ReactElement } from 'react';
-import { createStore, OpenFile, Plugin, ViewerState } from '@react-pdf-viewer/core';
+import { createStore, OpenFile, Plugin, ViewerState } from '@react-pdf-renderer/core';
 
 import Download, { DownloadProps } from './Download';
 import DownloadButton from './DownloadButton';
@@ -40,7 +40,7 @@ const downloadPlugin = (props?: DownloadPluginProps): DownloadPlugin => {
 
     const DownloadButtonDecorator = () => (
         <DownloadDecorator>
-            { (props) => <DownloadButton {...props} /> }
+            {(props) => <DownloadButton {...props} />}
         </DownloadDecorator>
     );
 

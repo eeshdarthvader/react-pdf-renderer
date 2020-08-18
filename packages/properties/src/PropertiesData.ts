@@ -6,7 +6,7 @@
  * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
 
-import { PdfJs } from '@react-pdf-viewer/core';
+import { PdfJs } from '@react-pdf-renderer/core';
 
 export default interface PropertiesData {
     fileName: string;

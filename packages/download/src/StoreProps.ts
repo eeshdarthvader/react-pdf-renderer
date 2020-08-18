@@ -6,7 +6,7 @@
  * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
 
-import type { OpenFile } from '@react-pdf-viewer/core';
+import type { OpenFile } from '@react-pdf-renderer/core';
 
 interface StoreProps {
     file?: OpenFile;

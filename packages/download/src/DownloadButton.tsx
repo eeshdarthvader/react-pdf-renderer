@@ -7,7 +7,7 @@
  */
 
 import React, { useContext } from 'react';
-import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-viewer/core';
+import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-renderer/core';
 
 import { RenderDownloadProps } from './Download';
 import DownloadIcon from './DownloadIcon';
@@ -18,8 +18,8 @@ const DownloadButton: React.FC<RenderDownloadProps> = ({ onClick }) => {
     const l10nContext = useContext(LocalizationContext);
 
     const label = (l10nContext && l10nContext.plugins && l10nContext.plugins.download)
-            ? l10nContext.plugins.download.download
-            : 'Download';
+        ? l10nContext.plugins.download.download
+        : 'Download';
 
     return (
         <Tooltip

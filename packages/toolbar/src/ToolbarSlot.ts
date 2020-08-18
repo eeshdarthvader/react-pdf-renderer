@@ -8,17 +8,17 @@
 
 import { ReactElement } from 'react';
 
-import { DownloadProps } from '@react-pdf-viewer/download';
-import { EnterFullScreenProps } from '@react-pdf-viewer/full-screen';
-import { OpenProps } from '@react-pdf-viewer/open';
-import { CurrentPageLabelProps, GoToFirstPageMenuItemProps, GoToFirstPageProps, GoToLastPageMenuItemProps, GoToLastPageProps, GoToNextPageProps, GoToPreviousPageProps } from '@react-pdf-viewer/page-navigation';
-import { PrintProps } from '@react-pdf-viewer/print';
-import { ShowPropertiesProps, ShowPropertiesMenuItemProps } from '@react-pdf-viewer/properties';
-import { RotateDecoratorProps, RotateProps } from '@react-pdf-viewer/rotate';
-import { SwitchScrollModeMenuItemProps, SwitchScrollModeProps } from '@react-pdf-viewer/scroll-mode';
-import type { ShowSearchPopoverProps } from '@react-pdf-viewer/search';
-import { SwitchSelectionModeMenuItemProps, SwitchSelectionModeProps } from '@react-pdf-viewer/selection-mode';
-import { CurrentScaleProps, ZoomProps, ZoomInProps, ZoomOutProps } from '@react-pdf-viewer/zoom';
+import { DownloadProps } from '@react-pdf-renderer/download';
+import { EnterFullScreenProps } from '@react-pdf-renderer/full-screen';
+import { OpenProps } from '@react-pdf-renderer/open';
+import { CurrentPageLabelProps, GoToFirstPageMenuItemProps, GoToFirstPageProps, GoToLastPageMenuItemProps, GoToLastPageProps, GoToNextPageProps, GoToPreviousPageProps } from '@react-pdf-renderer/page-navigation';
+import { PrintProps } from '@react-pdf-renderer/print';
+import { ShowPropertiesProps, ShowPropertiesMenuItemProps } from '@react-pdf-renderer/properties';
+import { RotateDecoratorProps, RotateProps } from '@react-pdf-renderer/rotate';
+import { SwitchScrollModeMenuItemProps, SwitchScrollModeProps } from '@react-pdf-renderer/scroll-mode';
+import type { ShowSearchPopoverProps } from '@react-pdf-renderer/search';
+import { SwitchSelectionModeMenuItemProps, SwitchSelectionModeProps } from '@react-pdf-renderer/selection-mode';
+import { CurrentScaleProps, ZoomProps, ZoomInProps, ZoomOutProps } from '@react-pdf-renderer/zoom';
 
 export default interface ToolbarSlot {
     CurrentPageInput(): ReactElement;

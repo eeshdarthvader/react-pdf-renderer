@@ -7,19 +7,19 @@
  */
 
 import { Component } from 'react';
-import type { ViewerProps } from '@react-pdf-viewer/core';
-import type { ToolbarPluginProps } from '@react-pdf-viewer/toolbar';
+import type { ViewerProps } from '@react-pdf-renderer/core';
+import type { ToolbarPluginProps } from '@react-pdf-renderer/toolbar';
 
 export interface DefaultLayoutProps extends ViewerProps {
     toolbarPlugin?: ToolbarPluginProps;
 }
 
-export default class DefaultLayout extends Component<DefaultLayoutProps> {}
+export default class DefaultLayout extends Component<DefaultLayoutProps> { }
 
 // -----
 // Icons
 // -----
 
-export class BookmarkIcon extends Component {}
-export class FileIcon extends Component {}
-export class ThumbnailIcon extends Component {}
+export class BookmarkIcon extends Component { }
+export class FileIcon extends Component { }
+export class ThumbnailIcon extends Component { }

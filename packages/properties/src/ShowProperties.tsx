@@ -7,7 +7,7 @@
  */
 
 import React, { FC, ReactElement, useContext } from 'react';
-import { LocalizationContext, Modal, Store, Toggle } from '@react-pdf-viewer/core';
+import { LocalizationContext, Modal, Store, Toggle } from '@react-pdf-renderer/core';
 
 import InfoIcon from './InfoIcon';
 import PropertiesModal from './PropertiesModal';
@@ -35,8 +35,8 @@ const ShowProperties: FC<{
     const l10n = useContext(LocalizationContext);
 
     const label = (l10n && l10n.plugins && l10n.plugins.properties)
-            ? l10n.plugins.properties.showProperties
-            : 'Show properties';
+        ? l10n.plugins.properties.showProperties
+        : 'Show properties';
 
     const fileName = store.get('fileName') || '';
 

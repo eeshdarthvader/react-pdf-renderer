@@ -6,12 +6,12 @@
  * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
 
-import { OpenFile } from '@react-pdf-viewer/core';
+import { OpenFile } from '@react-pdf-renderer/core';
 
 const downloadFile = (file: OpenFile, saveAs: string): void => {
     const blobUrl = (typeof file.data === 'string')
-                    ? ''
-                    : URL.createObjectURL(new Blob([file.data], { type: '' }));
+        ? ''
+        : URL.createObjectURL(new Blob([file.data], { type: '' }));
     const link = document.createElement('a');
     link.style.display = 'none';
     link.href = blobUrl || file.name;

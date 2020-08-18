@@ -7,7 +7,7 @@
  */
 
 import React, { FC, useContext } from 'react';
-import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-viewer/core';
+import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-renderer/core';
 
 import { RenderGoToFirstPageProps } from './GoToFirstPage';
 import UpArrowIcon from './UpArrowIcon';
@@ -18,8 +18,8 @@ const GoToFirstPageButton: FC<RenderGoToFirstPageProps> = ({ onClick }) => {
     const l10nContext = useContext(LocalizationContext);
 
     const label = (l10nContext && l10nContext.plugins && l10nContext.plugins.pageNavigation)
-            ? l10nContext.plugins.pageNavigation.goToFirstPageButton
-            : 'First page';
+        ? l10nContext.plugins.pageNavigation.goToFirstPageButton
+        : 'First page';
 
     return (
         <Tooltip

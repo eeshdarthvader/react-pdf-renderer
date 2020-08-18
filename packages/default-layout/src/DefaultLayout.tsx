@@ -7,11 +7,11 @@
  */
 
 import React from 'react';
-import Viewer, { Plugin, ViewerProps } from '@react-pdf-viewer/core';
-import attachmentPlugin from '@react-pdf-viewer/attachment';
-import bookmarkPlugin from '@react-pdf-viewer/bookmark';
-import thumbnailPlugin from '@react-pdf-viewer/thumbnail';
-import toolbarPlugin, { ToolbarPluginProps } from '@react-pdf-viewer/toolbar';
+import Viewer, { Plugin, ViewerProps } from '@react-pdf-renderer/core';
+import attachmentPlugin from '@react-pdf-renderer/attachment';
+import bookmarkPlugin from '@react-pdf-renderer/bookmark';
+import thumbnailPlugin from '@react-pdf-renderer/thumbnail';
+import toolbarPlugin, { ToolbarPluginProps } from '@react-pdf-renderer/toolbar';
 
 import Sidebar from './Sidebar';
 

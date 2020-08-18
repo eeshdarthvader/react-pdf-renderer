@@ -7,7 +7,7 @@
  */
 
 import React, { FC, useContext } from 'react';
-import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-viewer/core';
+import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-renderer/core';
 
 import { RenderGoToNextPageProps } from './GoToNextPage';
 import NextIcon from './NextIcon';
@@ -16,7 +16,7 @@ const TOOLTIP_OFFSET = { left: 0, top: 8 };
 
 const GoToNextPageButton: FC<RenderGoToNextPageProps> = ({ onClick }) => {
     const l10nContext = useContext(LocalizationContext);
-        
+
     const label = (l10nContext && l10nContext.plugins && l10nContext.plugins.pageNavigation)
         ? l10nContext.plugins.pageNavigation.nextPage
         : 'Next page';

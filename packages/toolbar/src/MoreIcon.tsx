@@ -7,7 +7,7 @@
  */
 
 import React, { FC } from 'react';
-import { Icon } from '@react-pdf-viewer/core';
+import { Icon } from '@react-pdf-renderer/core';
 
 const MoreIcon: FC = () => {
     return (
