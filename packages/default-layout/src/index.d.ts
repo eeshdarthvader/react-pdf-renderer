@@ -7,8 +7,8 @@
  */
 
 import { Component } from 'react';
-import type { ViewerProps } from '@react-pdf-renderer/core';
-import type { ToolbarPluginProps } from '@react-pdf-renderer/toolbar';
+import type { ViewerProps } from '@eeshdarthvader/core';
+import type { ToolbarPluginProps } from '@eeshdarthvader/toolbar';
 
 export interface DefaultLayoutProps extends ViewerProps {
     toolbarPlugin?: ToolbarPluginProps;

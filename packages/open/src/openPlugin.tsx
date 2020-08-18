@@ -7,7 +7,7 @@
  */
 
 import React, { ReactElement } from 'react';
-import { createStore, Plugin, PluginFunctions } from '@react-pdf-renderer/core';
+import { createStore, Plugin, PluginFunctions } from '@eeshdarthvader/core';
 
 import Open, { OpenProps } from './Open';
 

@@ -7,7 +7,7 @@
  */
 
 import React, { ReactElement } from 'react';
-import { createStore, Plugin, PluginOnDocumentLoad, ViewerState } from '@react-pdf-renderer/core';
+import { createStore, Plugin, PluginOnDocumentLoad, ViewerState } from '@eeshdarthvader/core';
 
 import ShowProperties, { ShowPropertiesProps } from './ShowProperties';
 import ShowPropertiesMenuItem from './ShowPropertiesMenuItem';

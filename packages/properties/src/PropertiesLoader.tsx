@@ -7,7 +7,7 @@
  */
 
 import React, { FC, ReactElement, useEffect, useState } from 'react';
-import { PdfJs, Spinner } from '@react-pdf-renderer/core';
+import { PdfJs, Spinner } from '@eeshdarthvader/core';
 
 import PropertiesData from './PropertiesData';
 

@@ -6,7 +6,7 @@
  * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
 
-import { OpenFile } from '@react-pdf-renderer/core';
+import { OpenFile } from '@eeshdarthvader/core';
 
 const downloadFile = (file: OpenFile, saveAs: string): void => {
     const blobUrl = (typeof file.data === 'string')

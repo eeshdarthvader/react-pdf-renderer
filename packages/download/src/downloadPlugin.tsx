@@ -7,7 +7,7 @@
  */
 
 import React, { ReactElement } from 'react';
-import { createStore, OpenFile, Plugin, ViewerState } from '@react-pdf-renderer/core';
+import { createStore, OpenFile, Plugin, ViewerState } from '@eeshdarthvader/core';
 
 import Download, { DownloadProps } from './Download';
 import DownloadButton from './DownloadButton';

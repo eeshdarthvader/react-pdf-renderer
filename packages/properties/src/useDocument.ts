@@ -7,7 +7,7 @@
  */
 
 import { useEffect, useState } from 'react';
-import { PdfJs, Store, StoreHandler } from '@react-pdf-renderer/core';
+import { PdfJs, Store, StoreHandler } from '@eeshdarthvader/core';
 
 import StoreProps from './StoreProps';
 

@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { Icon } from '@react-pdf-renderer/core';
+import { Icon } from '@eeshdarthvader/core';
 
 const ThumbnailIcon: React.FC = () => {
     return (

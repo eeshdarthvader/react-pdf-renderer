@@ -7,7 +7,7 @@
  */
 
 import React, { FC } from 'react';
-import { Icon } from '@react-pdf-renderer/core';
+import { Icon } from '@eeshdarthvader/core';
 
 const ZoomInIcon: FC = () => {
     return (

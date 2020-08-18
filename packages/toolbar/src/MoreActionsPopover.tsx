@@ -7,9 +7,7 @@
  */
 
 import React, { useContext } from 'react';
-import { Button, LocalizationContext, Menu, MenuDivider, Popover, Position, Toggle, Tooltip } from '@react-pdf-renderer/core';
-import { ScrollMode } from '@react-pdf-renderer/scroll-mode';
-import { SelectionMode } from '@react-pdf-renderer/selection-mode';
+import { Button, LocalizationContext, Menu, MenuDivider, Popover, Position, Toggle, Tooltip } from '@eeshdarthvader/core';
 
 import MoreIcon from './MoreIcon';
 import ToolbarSlot from './ToolbarSlot';
@@ -23,8 +21,7 @@ const PORTAL_OFFSET = { left: 0, top: 8 };
 const MoreActionsPopover: React.FC<MoreActionsPopoverProps> = ({ toolbarSlot }) => {
     const l10n = useContext(LocalizationContext);
     const {
-        GoToFirstPageMenuItem, GoToLastPageMenuItem, RotateBackwardMenuItem, RotateForwardMenuItem, ShowPropertiesMenuItem,
-        SwitchScrollModeMenuItem, SwitchSelectionModeMenuItem,
+        GoToFirstPageMenuItem, GoToLastPageMenuItem
     } = toolbarSlot;
 
     const renderTarget = (toggle: Toggle, opened: boolean): React.ReactElement => {
@@ -48,17 +45,6 @@ const MoreActionsPopover: React.FC<MoreActionsPopoverProps> = ({ toolbarSlot }) 
                 <GoToFirstPageMenuItem onClick={toggle} />
                 <GoToLastPageMenuItem onClick={toggle} />
                 <MenuDivider />
-                <RotateForwardMenuItem onClick={toggle} />
-                <RotateBackwardMenuItem onClick={toggle} />
-                <MenuDivider />
-                <SwitchSelectionModeMenuItem mode={SelectionMode.Text} onClick={toggle} />
-                <SwitchSelectionModeMenuItem mode={SelectionMode.Hand} onClick={toggle} />
-                <MenuDivider />
-                <SwitchScrollModeMenuItem mode={ScrollMode.Vertical} onClick={toggle} />
-                <SwitchScrollModeMenuItem mode={ScrollMode.Horizontal} onClick={toggle} />
-                <SwitchScrollModeMenuItem mode={ScrollMode.Wrapped} onClick={toggle} />
-                <MenuDivider />
-                <ShowPropertiesMenuItem onClick={toggle} />
             </Menu>
         );
     };

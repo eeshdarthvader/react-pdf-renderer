@@ -7,7 +7,7 @@
  */
 
 import React, { ChangeEvent, FC, KeyboardEvent, useState } from 'react';
-import { Store } from '@react-pdf-renderer/core';
+import { Store } from '@eeshdarthvader/core';
 
 import StoreProps from './StoreProps';
 import useCurrentPage from './useCurrentPage';

@@ -7,7 +7,7 @@
  */
 
 import React, { FC, useContext } from 'react';
-import { LocalizationContext, MenuItem } from '@react-pdf-renderer/core';
+import { LocalizationContext, MenuItem } from '@eeshdarthvader/core';
 
 import UpArrowIcon from './UpArrowIcon';
 

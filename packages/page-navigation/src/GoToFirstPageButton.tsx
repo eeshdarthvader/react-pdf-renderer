@@ -7,7 +7,7 @@
  */
 
 import React, { FC, useContext } from 'react';
-import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-renderer/core';
+import { Button, LocalizationContext, Position, Tooltip } from '@eeshdarthvader/core';
 
 import { RenderGoToFirstPageProps } from './GoToFirstPage';
 import UpArrowIcon from './UpArrowIcon';

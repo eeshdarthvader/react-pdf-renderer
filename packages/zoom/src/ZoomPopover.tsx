@@ -7,7 +7,7 @@
  */
 
 import React, { useContext } from 'react';
-import { LocalizationContext, LocalizationMap, Menu, MenuDivider, MenuItem, Popover, Position, SpecialZoomLevel, Toggle } from '@react-pdf-renderer/core';
+import { LocalizationContext, LocalizationMap, Menu, MenuDivider, MenuItem, Popover, Position, SpecialZoomLevel, Toggle } from '@eeshdarthvader/core';
 
 import { RenderZoomProps } from './Zoom';
 

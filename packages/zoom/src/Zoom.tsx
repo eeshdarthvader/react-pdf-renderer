@@ -7,7 +7,7 @@
  */
 
 import React, { ReactElement } from 'react';
-import { SpecialZoomLevel, Store } from '@react-pdf-renderer/core';
+import { SpecialZoomLevel, Store } from '@eeshdarthvader/core';
 
 import StoreProps from './StoreProps';
 import useZoom from './useZoom';

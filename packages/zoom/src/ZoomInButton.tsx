@@ -7,7 +7,7 @@
  */
 
 import React, { FC, useContext } from 'react';
-import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-renderer/core';
+import { Button, LocalizationContext, Position, Tooltip } from '@eeshdarthvader/core';
 
 import { RenderZoomInProps } from './ZoomIn';
 import ZoomInIcon from './ZoomInIcon';

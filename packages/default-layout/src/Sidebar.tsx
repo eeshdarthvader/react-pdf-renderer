@@ -7,7 +7,7 @@
  */
 
 import React, { ReactElement, useContext, useState } from 'react';
-import { Button, LocalizationContext, Position, Tooltip } from '@react-pdf-renderer/core';
+import { Button, LocalizationContext, Position, Tooltip } from '@eeshdarthvader/core';
 
 import BookmarkIcon from './BookmarkIcon';
 import FileIcon from './FileIcon';

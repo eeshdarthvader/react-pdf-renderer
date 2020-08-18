@@ -7,7 +7,7 @@
  */
 
 import { Component, ReactElement } from 'react';
-import { OpenFile, Plugin } from '@react-pdf-renderer/core';
+import { OpenFile, Plugin } from '@eeshdarthvader/core';
 
 export interface RenderDownloadProps {
     onClick(): void;

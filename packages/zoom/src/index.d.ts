@@ -7,7 +7,7 @@
  */
 
 import { Component, ReactElement, ReactNode } from 'react';
-import { Plugin, SpecialZoomLevel } from '@react-pdf-renderer/core';
+import { Plugin, SpecialZoomLevel } from '@eeshdarthvader/core';
 
 // ------------------------
 // Render zooming in button

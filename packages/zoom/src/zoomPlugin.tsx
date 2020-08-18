@@ -7,7 +7,7 @@
  */
 
 import React, { ReactElement } from 'react';
-import { createStore, Plugin, PluginFunctions, ViewerState } from '@react-pdf-renderer/core';
+import { createStore, Plugin, PluginFunctions, ViewerState } from '@eeshdarthvader/core';
 
 import CurrentScale, { CurrentScaleProps } from './CurrentScale';
 import Zoom, { ZoomProps } from './Zoom';

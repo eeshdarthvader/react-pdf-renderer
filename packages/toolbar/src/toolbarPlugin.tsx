@@ -1,26 +1,16 @@
 /**
  * A React component to view a PDF document
  *
- * @see https://react-pdf-viewer.dev
- * @license https://react-pdf-viewer.dev/license
- * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
 
 import React from 'react';
 
-import { Plugin, PluginFunctions, PluginOnDocumentLoad, RenderViewer, ViewerState, PluginOnTextLayerRender } from '@react-pdf-renderer/core';
-import downloadPlugin, { DownloadPluginProps } from '@react-pdf-renderer/download';
-import dropPlugin from '@react-pdf-renderer/drop';
-import fullScreenPlugin from '@react-pdf-renderer/full-screen';
-import openPlugin from '@react-pdf-renderer/open';
-import pageNavigationPlugin from '@react-pdf-renderer/page-navigation';
-import printPlugin from '@react-pdf-renderer/print';
-import propertiesPlugin from '@react-pdf-renderer/properties';
-import rotatePlugin from '@react-pdf-renderer/rotate';
-import scrollModePlugin from '@react-pdf-renderer/scroll-mode';
-import searchPlugin, { SearchPluginProps } from '@react-pdf-renderer/search';
-import selectionModePlugin, { SelectionModePluginProps } from '@react-pdf-renderer/selection-mode';
-import zoomPlugin from '@react-pdf-renderer/zoom';
+import { Plugin, PluginFunctions, PluginOnDocumentLoad, RenderViewer, ViewerState, PluginOnTextLayerRender } from '@eeshdarthvader/core';
+import downloadPlugin, { DownloadPluginProps } from '@eeshdarthvader/download';
+import openPlugin from '@eeshdarthvader/open';
+import pageNavigationPlugin from '@eeshdarthvader/page-navigation';
+import propertiesPlugin from '@eeshdarthvader/properties';
+import zoomPlugin from '@eeshdarthvader/zoom';
 
 import Toolbar, { ToolbarProps } from './Toolbar';
 
@@ -30,53 +20,33 @@ interface ToolbarPlugin extends Plugin {
 
 export interface ToolbarPluginProps {
     downloadPlugin?: DownloadPluginProps;
-    searchPlugin?: SearchPluginProps;
-    selectionModePlugin?: SelectionModePluginProps;
 }
 
 const toolbarPlugin = (props?: ToolbarPluginProps): ToolbarPlugin => {
     const downloadPluginInstance = downloadPlugin(props ? props.downloadPlugin : {});
-    const dropPluginInstance = dropPlugin();
-    const fullScreenPluginInstance = fullScreenPlugin();
     const openPluginInstance = openPlugin();
     const pageNavigationPluginInstance = pageNavigationPlugin();
-    const printPluginInstance = printPlugin();
     const propertiesPluginInstance = propertiesPlugin();
-    const rotatePluginInstance = rotatePlugin();
-    const scrollModePluginInstance = scrollModePlugin();
-    const searchPluginInstance = searchPlugin(props ? props.searchPlugin : {});
-    const selectionModePluginInstance = selectionModePlugin(props ? props.selectionModePlugin : {});
     const zoomPluginInstance = zoomPlugin();
 
     const plugins = [
         downloadPluginInstance,
-        dropPluginInstance,
-        fullScreenPluginInstance,
         openPluginInstance,
         pageNavigationPluginInstance,
-        printPluginInstance,
         propertiesPluginInstance,
-        rotatePluginInstance,
-        scrollModePluginInstance,
-        searchPluginInstance,
-        selectionModePluginInstance,
         zoomPluginInstance,
     ];
 
     const ToolbarDecorator = (props: ToolbarProps) => {
         const { Download } = downloadPluginInstance;
-        const { EnterFullScreen } = fullScreenPluginInstance;
+
         const { Open } = openPluginInstance;
         const {
             CurrentPageInput, CurrentPageLabel, GoToFirstPage, GoToFirstPageMenuItem, GoToLastPage,
             GoToLastPageMenuItem, GoToNextPage, GoToPreviousPage,
         } = pageNavigationPluginInstance;
-        const { Print } = printPluginInstance;
-        const { ShowProperties, ShowPropertiesMenuItem } = propertiesPluginInstance;
-        const { Rotate, RotateBackwardMenuItem, RotateForwardMenuItem } = rotatePluginInstance;
-        const { SwitchScrollMode, SwitchScrollModeMenuItem } = scrollModePluginInstance;
-        const { ShowSearchPopover } = searchPluginInstance;
-        const { SwitchSelectionMode, SwitchSelectionModeMenuItem } = selectionModePluginInstance;
+
+
         const { CurrentScale, Zoom, ZoomIn, ZoomOut } = zoomPluginInstance;
 
         const NumberOfPages = () => (
@@ -93,7 +63,6 @@ const toolbarPlugin = (props?: ToolbarPluginProps): ToolbarPlugin => {
                     CurrentPageLabel,
                     CurrentScale,
                     Download,
-                    EnterFullScreen,
                     GoToFirstPage,
                     GoToFirstPageMenuItem,
                     GoToLastPage,
@@ -102,17 +71,6 @@ const toolbarPlugin = (props?: ToolbarPluginProps): ToolbarPlugin => {
                     GoToPreviousPage,
                     NumberOfPages,
                     Open,
-                    Print,
-                    Rotate,
-                    RotateBackwardMenuItem,
-                    RotateForwardMenuItem,
-                    ShowProperties,
-                    ShowPropertiesMenuItem,
-                    ShowSearchPopover,
-                    SwitchScrollMode,
-                    SwitchScrollModeMenuItem,
-                    SwitchSelectionMode,
-                    SwitchSelectionModeMenuItem,
                     Zoom,
                     ZoomIn,
                     ZoomOut,

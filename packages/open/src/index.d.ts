@@ -7,7 +7,7 @@
  */
 
 import { ChangeEvent, Component, ReactElement } from 'react';
-import { Plugin } from '@react-pdf-renderer/core';
+import { Plugin } from '@eeshdarthvader/core';
 
 export interface RenderOpenProps {
     onClick: (e: ChangeEvent<HTMLInputElement>) => void;

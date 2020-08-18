@@ -7,7 +7,7 @@
  */
 
 import React, { useContext } from 'react';
-import { LocalizationContext, Position, Tooltip } from '@react-pdf-renderer/core';
+import { LocalizationContext, Position, Tooltip } from '@eeshdarthvader/core';
 
 import { RenderOpenProps } from './Open';
 import OpenFileIcon from './OpenFileIcon';

@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { Store } from '@react-pdf-renderer/core';
+import { Store } from '@eeshdarthvader/core';
 
 import StoreProps from './StoreProps';
 import useZoom from './useZoom';

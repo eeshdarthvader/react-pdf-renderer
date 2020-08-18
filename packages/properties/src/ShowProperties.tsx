@@ -7,7 +7,7 @@
  */
 
 import React, { FC, ReactElement, useContext } from 'react';
-import { LocalizationContext, Modal, Store, Toggle } from '@react-pdf-renderer/core';
+import { LocalizationContext, Modal, Store, Toggle } from '@eeshdarthvader/core';
 
 import InfoIcon from './InfoIcon';
 import PropertiesModal from './PropertiesModal';

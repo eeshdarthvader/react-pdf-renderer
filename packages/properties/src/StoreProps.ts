@@ -6,7 +6,7 @@
  * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>
  */
 
-import { PdfJs } from '@react-pdf-renderer/core';
+import { PdfJs } from '@eeshdarthvader/core';
 
 export default interface StoreProps {
     doc?: PdfJs.PdfDocument;

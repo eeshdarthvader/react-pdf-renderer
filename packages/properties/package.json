@@ -1,5 +1,5 @@
 {
-    "name": "@react-pdf-renderer/properties",
+    "name": "@eeshdarthvader/properties",
     "version": "0.0.1",
     "description": "A React component to view a PDF document",
     "keywords": [
@@ -28,7 +28,7 @@
     "dependencies": {
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
-        "@react-pdf-renderer/core": "^2.0.0"
+        "@eeshdarthvader/core": "0.0.1"
     },
     "scripts": {
         "clean": "rm -rf npm && mkdir npm",

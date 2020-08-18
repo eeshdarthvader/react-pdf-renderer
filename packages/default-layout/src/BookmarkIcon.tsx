@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { Icon } from '@react-pdf-renderer/core';
+import { Icon } from '@eeshdarthvader/core';
 
 const BookmarkIcon: React.FC = () => {
     return (

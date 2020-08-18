@@ -7,7 +7,7 @@
  */
 
 import React, { FC, useContext } from 'react';
-import { LocalizationContext, PdfJs, PrimaryButton, Separator } from '@react-pdf-renderer/core';
+import { LocalizationContext, PdfJs, PrimaryButton, Separator } from '@eeshdarthvader/core';
 
 import PropertiesData from './PropertiesData';
 import PropertiesLoader from './PropertiesLoader';

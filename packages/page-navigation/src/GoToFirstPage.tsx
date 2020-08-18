@@ -7,7 +7,7 @@
  */
 
 import React, { FC, ReactElement } from 'react';
-import { Store } from '@react-pdf-renderer/core';
+import { Store } from '@eeshdarthvader/core';
 
 import GoToFirstPageButton from './GoToFirstPageButton';
 import StoreProps from './StoreProps';
