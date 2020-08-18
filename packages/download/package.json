@@ -1,6 +1,6 @@
 {
     "name": "@eeshdarthvader/download",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A React component to view a PDF document",
     "keywords": [
         "react",
@@ -26,9 +26,9 @@
         "npm/index.js"
     ],
     "dependencies": {
+        "@eeshdarthvader/core": "^0.0.2",
         "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "@eeshdarthvader/core": "0.0.1"
+        "react-dom": "^16.13.1"
     },
     "scripts": {
         "clean": "rm -rf npm && mkdir npm",
