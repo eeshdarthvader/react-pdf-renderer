@@ -1,9 +1,7 @@
 /**
  * A React component to view a PDF document
  *
- * @see https://react-pdf-renderer.dev
- * @license https://react-pdf-renderer.dev/license
- * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>
+
  */
 
 import React from 'react';
@@ -22,7 +20,6 @@ interface ToolbarSlot {
     fullScreenButton: React.ReactNode;
     downloadButton: React.ReactNode;
     openFileButton: React.ReactNode;
-    printButton: React.ReactNode;
     goToFirstPageButton: React.ReactNode;
     goToLastPageButton: React.ReactNode;
     rotateClockwiseButton: React.ReactNode;

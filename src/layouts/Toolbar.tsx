@@ -1,9 +1,7 @@
 /**
  * A React component to view a PDF document
  *
- * @see https://react-pdf-renderer.dev
- * @license https://react-pdf-renderer.dev/license
- * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>
+
  */
 
 import React, { useContext, useState } from 'react';
@@ -19,7 +17,6 @@ import InfoIcon from '../icons/InfoIcon';
 import LeftSidebarIcon from '../icons/LeftSidebarIcon';
 import NextIcon from '../icons/NextIcon';
 import PreviousIcon from '../icons/PreviousIcon';
-import PrintIcon from '../icons/PrintIcon';
 import RotateBackwardIcon from '../icons/RotateBackwardIcon';
 import RotateForwardIcon from '../icons/RotateForwardIcon';
 import TextSelectionIcon from '../icons/TextSelectionIcon';
@@ -63,7 +60,6 @@ interface ToolbarProps {
     onJumpTo(pageIndex: number): void;
     onJumpToMatch(match: Match): void;
     onOpenFiles(files: FileList): void;
-    onPrint(): void;
     onRotate(degree: number): void;
     onSearchFor(keyword: RegExp): void;
     onToggleSidebar(): void;
@@ -75,7 +71,7 @@ const TOOLTIP_OFFSET = { left: 0, top: 8 };
 const Toolbar: React.FC<ToolbarProps> = ({
     currentPage, doc, fileName, scale, scrollMode, selectionMode,
     onChangeScrollMode, onChangeSelectionMode, onDownload, onFullScreen, onJumpTo,
-    onJumpToMatch, onOpenFiles, onPrint, onRotate, onSearchFor, onToggleSidebar, onZoom,
+    onJumpToMatch, onOpenFiles, onRotate, onSearchFor, onToggleSidebar, onZoom,
     renderToolbar,
 }) => {
     const l10n = useContext(LocalizationContext);
@@ -163,7 +159,6 @@ const Toolbar: React.FC<ToolbarProps> = ({
     const renderZoomIn = (): LocalizationMap => l10n.toolbar.zoomIn;
     const renderFullScreen = (): LocalizationMap => l10n.toolbar.fullScreen;
     const renderDownload = (): LocalizationMap => l10n.toolbar.download;
-    const renderPrint = (): LocalizationMap => l10n.toolbar.print;
     const renderGoToFirstPage = (): LocalizationMap => l10n.toolbar.goToFirstPage;
     const renderGoToLastPage = (): LocalizationMap => l10n.toolbar.goToLastPage;
     const renderRotateClockwise = (): LocalizationMap => l10n.toolbar.rotateForward;
@@ -289,14 +284,6 @@ const Toolbar: React.FC<ToolbarProps> = ({
                 position={Position.BottomCenter}
                 target={<Button onClick={gotoPreviousPage}><PreviousIcon /></Button>}
                 content={renderPreviousPage}
-                offset={TOOLTIP_OFFSET}
-            />
-        ),
-        printButton: (
-            <Tooltip
-                position={Position.BottomCenter}
-                target={<Button onClick={onPrint}><PrintIcon /></Button>}
-                content={renderPrint}
                 offset={TOOLTIP_OFFSET}
             />
         ),

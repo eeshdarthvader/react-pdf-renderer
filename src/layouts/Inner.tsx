@@ -1,9 +1,7 @@
 /**
  * A React component to view a PDF document
  *
- * @see https://react-pdf-renderer.dev
- * @license https://react-pdf-renderer.dev/license
- * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>
+
  */
 
 import React, { useContext, useEffect, useRef, useState } from 'react';
@@ -15,8 +13,6 @@ import useFullScreen from '../hooks/useFullScreen';
 import useToggle from '../hooks/useToggle';
 import PageLayer from '../layers/PageLayer';
 import DropArea from '../open/DropArea';
-import PrintContainer from '../print/PrintContainer';
-import PrintStatus from '../print/PrintStatus';
 import Match from '../search/Match';
 import ScrollMode from '../ScrollMode';
 import SelectionMode from '../SelectionMode';
@@ -112,8 +108,6 @@ const Inner: React.FC<InnerProps> = ({
     };
     const { isDragging } = useDrop(containerRef, (files) => openFiles(files));
 
-    // Print status
-    const [printStatus, setPrintStatus] = useState(PrintStatus.Inactive);
 
     const jumpToPage = (pageIndex: number): void => {
         if (pageIndex < 0 || pageIndex >= numPages) {
@@ -289,10 +283,6 @@ const Inner: React.FC<InnerProps> = ({
         }
     };
 
-    // Switch to the print mode
-    const print = (): void => setPrintStatus(PrintStatus.Preparing);
-    const cancelPrinting = (): void => setPrintStatus(PrintStatus.Inactive);
-    const startPrinting = (): void => setPrintStatus(PrintStatus.Ready);
 
     return render({
         viewer: layout(
@@ -306,15 +296,6 @@ const Inner: React.FC<InnerProps> = ({
                 },
                 children: (
                     <>
-                        <PrintContainer
-                            doc={doc}
-                            pageHeight={pageHeight}
-                            pageWidth={pageWidth}
-                            printStatus={printStatus}
-                            rotation={rotation}
-                            onCancel={cancelPrinting}
-                            onStartPrinting={startPrinting}
-                        />
                         {isDragging && <DropArea />}
                     </>
                 )
@@ -378,7 +359,6 @@ const Inner: React.FC<InnerProps> = ({
                     onJumpTo={jumpToPage}
                     onJumpToMatch={jumpToMatch}
                     onOpenFiles={openFiles}
-                    onPrint={print}
                     onRotate={rotate}
                     onSearchFor={setKeywordRegexp}
                     onToggleSidebar={toggleSidebar.toggle}
@@ -406,7 +386,6 @@ const Inner: React.FC<InnerProps> = ({
         changeScrollMode,
         changeSelectionMode,
         jumpToPage,
-        print,
         rotate,
         zoom,
     });

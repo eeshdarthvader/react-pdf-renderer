@@ -1,9 +1,7 @@
 /**
  * A React component to view a PDF document
  *
- * @see https://react-pdf-renderer.dev
- * @license https://react-pdf-renderer.dev/license
- * @copyright 2019-2020 Nguyen Huu Phuoc <me@phuoc.ng>
+
  */
 
 import React, { useContext } from 'react';
@@ -54,9 +52,6 @@ const defaultToolbar: RenderToolbarSlot = (toolbarSlot: ToolbarSlot): React.Reac
                 </div>
                 <div className={`${theme.prefixClass}-toolbar-item`}>
                     {toolbarSlot.downloadButton}
-                </div>
-                <div className={`${theme.prefixClass}-toolbar-item`}>
-                    {toolbarSlot.printButton}
                 </div>
                 <div className={`${theme.prefixClass}-toolbar-item`}>
                     {toolbarSlot.moreActionsPopover}
