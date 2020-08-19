@@ -1,57 +1,128 @@
-import path from 'path';
 import less from 'rollup-plugin-less-modules';
 import { terser } from 'rollup-plugin-terser';
 import json from '@rollup/plugin-json';
 import typescript from '@rollup/plugin-typescript';
 
-const rootPackagePath = process.cwd();
-const input = path.join(rootPackagePath, 'src/index.ts');
-const pkg = require(path.join(rootPackagePath, 'package.json'));
+const input = './src/index.ts';
 
-const outputDir = path.join(rootPackagePath, 'npm');
-const pgkName = pkg.name.split('/').pop();
-
-const external = [
-    ...Object.keys(pkg.dependencies || {}),
-    ...Object.keys(pkg.peerDependencies || {}),
-];
-
-const noBundleCss = process.env.NO_CSS === 'true';
-
-const plugins = [
-    json(),
-    typescript(),
-].concat(noBundleCss ? [] : [
-    less({
-        output: path.join(outputDir, 'styles/index.css'),
-        sourcemap: false,
-    }),
-]);
+const excludeAllExternals = id => !id.startsWith('.') && !id.startsWith('/');
 
 export default [
+    // UMD
+    {
+        input,
+        output: {
+            file: './dist/umd/react-pdf-renderer.js',
+            format: 'umd',
+            name: 'ReactPdfViewer',
+            globals: {
+                PdfJs: 'pdfjs-dist',
+                react: 'React',
+                'react-dom': 'ReactDOM',
+            },
+        },
+        external: ['pdfjs-dist', 'react', 'react-dom'],
+        plugins: [
+            json(),
+            less({
+                output: './dist/umd/react-pdf-renderer.css',
+                sourcemap: false,
+            }),
+            typescript({
+                removeComments: true,
+                module: 'es6',
+                target: 'es5',
+                jsx: 'react',
+                allowSyntheticDefaultImports: true,
+                resolveJsonModule: true,
+                moduleResolution: 'node',
+            }),
+        ],
+    },
+
+    // Minified UMD
+    {
+        input,
+        output: {
+            file: './dist/umd/react-pdf-renderer.min.js',
+            format: 'umd',
+            name: 'ReactPdfViewer',
+            globals: {
+                PdfJs: 'pdfjs-dist',
+                react: 'React',
+                'react-dom': 'ReactDOM',
+            },
+        },
+        external: ['pdfjs-dist', 'react', 'react-dom'],
+        plugins: [
+            json(),
+            less({
+                output: './dist/umd/react-pdf-renderer.css',
+                sourcemap: false,
+            }),
+            typescript({
+                removeComments: true,
+                module: 'es6',
+                target: 'es5',
+                jsx: 'react',
+                allowSyntheticDefaultImports: true,
+                resolveJsonModule: true,
+                moduleResolution: 'node',
+            }),
+            terser(),
+        ],
+    },
+
     // CJS
     {
         input,
         output: {
-            exports: 'named',
-            file: path.join(outputDir, `cjs/${pgkName}.js`),
+            file: './dist/cjs/react-pdf-renderer.js',
             format: 'cjs',
         },
-        external,
-        plugins,
+        external: ['pdfjs-dist', 'react', 'react-dom'],
+        plugins: [
+            json(),
+            less({
+                output: './dist/cjs/react-pdf-renderer.css',
+                sourcemap: false,
+            }),
+            typescript({
+                removeComments: true,
+                module: 'es6',
+                target: 'es5',
+                jsx: 'react',
+                allowSyntheticDefaultImports: true,
+                resolveJsonModule: true,
+                moduleResolution: 'node',
+            }),
+        ],
     },
 
     // Minified CJS
     {
         input,
         output: {
-            exports: 'named',
-            file: path.join(outputDir, `cjs/${pgkName}.min.js`),
+            file: './dist/cjs/react-pdf-renderer.min.js',
             format: 'cjs',
         },
-        external,
-        plugins: plugins.concat([
+        external: ['pdfjs-dist', 'react', 'react-dom'],
+        plugins: [
+            json(),
+            less({
+                output: './dist/cjs/react-pdf-renderer.css',
+                sourcemap: false,
+            }),
+            typescript({
+                removeComments: true,
+                module: 'es6',
+                target: 'es5',
+                jsx: 'react',
+                allowSyntheticDefaultImports: true,
+                resolveJsonModule: true,
+                moduleResolution: 'node',
+            }),
             terser(),
-        ]),
+        ],
     }
 ];
